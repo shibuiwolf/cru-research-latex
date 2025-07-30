@@ -1,0 +1,185 @@
+\makeatletter
+\clearpage\pagestyle{empty}
+% COVER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	{\centering
+	\fontsize{16}{18.4}\selectfont
+		\includegraphics[width=1in]{CRU_LOGO/CRU_Chandra}\\\vspace{\baselineskip}
+		\bfseries\@thesistitleThai
+	\vfill
+	\fontsize{14}{16.1}\selectfont โดย\\\vspace{1.427465\baselineskip}
+	\@authorThai
+	\vfill
+	 \@typeofwritingThai นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตร\\
+	\@degreeThai\\
+	\ifdefined\@majorThai \@majorThai \ifdefined\@departmentThai\space\fi\fi \ifdefined\@departmentThai \@departmentThai\\ \fi
+	\@facultyThai\space มหาวิทยาลัยธรรมศาสตร์\\
+	ปีการศึกษา \the\year
+	\par}
+
+
+\cleardoublepage
+\newpage
+
+
+%% TITLE PAGE IN THAI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	{\centering
+%	\fontsize{16}{18.4}\selectfont
+%		\bfseries\expandafter\uppercase\expandafter{\@thesistitleThai}\\\vspace{1.427465\baselineskip}\ \\
+%	\fontsize{14}{16.1}\selectfont\bfseries โดย\\\vspace{1.427465\baselineskip}
+%	\expandafter\uppercase\expandafter{\@authorThai}
+%	\vfill
+%	\@typeofwritingThai นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตร\\
+%	\@degreeThai\\
+%	\ifdefined\@majorThai \@majorThai \ifdefined\@departmentThai\space\fi\fi \ifdefined\@departmentThai \@departmentThai\\ \fi
+%	\@facultyThai\space มหาวิทยาลัยธรรมศาสตร์\\
+%	ปีการศึกษา \the\year\\
+%	ลิขสิทธิ์ของมหาวิทยาลัยธรรมศาสตร์ 
+%	\par}
+%
+%\cleardoublepage
+%\newpage
+%
+%
+%
+% TITLE PAGE IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\centering
+	\fontsize{16}{18.4}\selectfont
+	\bfseries\expandafter\uppercase\expandafter{\@thesistitle}\\\vspace{1.427465\baselineskip}\ \\
+	\fontsize{14}{16.1}\selectfont\bfseries BY\\\vspace{1.427465\baselineskip}
+	\expandafter\uppercase\expandafter{\@author}
+	\vfill
+	\ifx\@typeofwriting\IndStudy AN	\else A	\fi 
+	\expandafter\uppercase\expandafter{\@typeofwriting}\ SUBMITTED IN PARTIAL FULFILLMENT OF\\
+	THE REQUIREMENTS FOR THE DEGREE OF\\
+	\expandafter\uppercase\expandafter{\@degree}\\
+	\ifdefined\@major \expandafter\uppercase\expandafter{\@major}\\ \fi
+	\ifdefined\@department \expandafter\uppercase\expandafter{\@department}\\ \fi
+	\expandafter\uppercase\expandafter{\@faculty}\\
+	THAMMASAT UNIVERSITY\\
+	ACADEMIC YEAR \advance\year-543 \the\year
+	\par}
+
+\cleardoublepage
+\newpage
+
+
+% Approval Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	{\centering  มหาวิทยาลัยธรรมศาสตร์\\
+	\expandafter\uppercase\expandafter{\@facultyThai}\\[7mm]
+	\expandafter\uppercase\expandafter{\@typeofwritingThai}\\[7mm]
+	โดย\\[7mm]
+	\expandafter\uppercase\expandafter{\@authorThai}\\[7mm]
+	เรื่อง\\[7mm]
+	\expandafter\uppercase\expandafter{\@thesistitleThai}\\[7mm]
+	ได้รับการตรวจสอบและอนุมัติ ให้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตร\\
+	\@degreeThai\\[7mm]
+	เมื่อ วันที่ \@approvaldate\\[7mm]}
+	\vfill
+	\noindent{ประธานกรรมการสอบ\@typeofwritingThai} \hfill 
+	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@chairman)}}\\
+	\vfill
+	\noindent{กรรมการและอาจารย์ที่ปรึกษา\@typeofwritingThai\ifdefined\@coadvisorThai หลัก\fi} \hfill 
+	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@advisorThai)}}\\
+	\ifdefined\@coadvisorThai\vfill
+	\noindent{กรรมการและอาจารย์ที่ปรึกษา\@typeofwritingThai รอง} \hfill 
+	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@coadvisorThai)}}\\\fi
+	\ifdefined\@memberone\vfill
+	\noindent{กรรมการสอบ\@typeofwritingThai} \hfill 
+	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@memberone)}}\\\fi
+	\ifdefined\@membertwo\vfill
+	\noindent{กรรมการสอบ\@typeofwritingThai} \hfill 
+	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@membertwo)}}\\\fi
+	\vfill
+	\noindent{คณบดี} \hfill 
+	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@dean)}}
+	\ifx\@coadvisorThai\undefined
+	\\[5mm]
+	\fi
+	\ifx\@memberone\undefined
+	\\[5mm]
+	\fi
+	\ifx\@membertwo\undefined
+	\\[5mm]
+	\fi
+	
+\cleardoublepage	
+\newpage
+
+
+
+% ABSTRACT IN THAI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}
+\frontmatter
+\noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
+	หัวข้อ\@typeofwritingThai					& \parbox[t]{\linewidth}{\strut\@thesistitleforabstractThai\strut}\\
+	ชื่อผู้เขียน									& \@authorThai\\
+	ชื่อปริญญา									& \@degreeThai\\
+	\ifdefined\@majorThai สาขาวิชา\else ภาควิชา \fi
+	/คณะ/มหาวิทยาลัย					& \ifdefined\@majorThai \@majorThai \else \@departmentThai \fi\\
+	& \@facultyThai\\
+	& มหาวิทยาลัยธรรมศาสตร์\\
+	อาจารย์ที่ปรึกษา\@typeofwritingThai		& \@advisorThai\\
+	\ifdefined\@coadvisorThai อาจารย์ที่ปรึกษา\@typeofwritingThai ร่วม & \@coadvisorThai\\ \fi
+	ปีการศึกษา						& \the\year
+\end{tabularx}
+\includecollection{abstractThai}
+
+
+
+
+\cleardoublepage
+\newpage
+
+
+
+% ABSTRACT IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}
+\frontmatter
+\noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
+\@typeofwriting\ Title							& \parbox[t]{\linewidth}{\strut\expandafter\uppercase\expandafter{\@thesistitleforabstract}\strut}\\
+Author									& \@author\\
+Degree									& \@degree\\
+\ifdefined\@major Major Field\else Department \fi
+/Faculty/University					& \ifdefined\@major \@major \else \@department \fi\\
+											& \@faculty\\
+											& Thammasat University\\
+\@typeofwriting\ Advisor		& \@advisor\\
+\ifdefined\@coadvisor\@typeofwriting\ Co-advisor & \@coadvisor\\ \fi
+Academic Year						& \advance\year-543 \the\year
+\end{tabularx}
+\includecollection{abstract}
+
+
+
+\cleardoublepage
+\newpage
+
+
+
+% ACKNOWLEDGEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includecollection{acknowledgements}
+
+
+\cleardoublepage
+\newpage
+
+
+% CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\makeatother
+
+
+
+
+

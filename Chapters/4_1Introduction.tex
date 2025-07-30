@@ -1,0 +1,282 @@
+\chapter{Introduction}
+
+
+This template is created from the memoir \LaTeX\ class including some important packages. It is modified depending on requirements of Thammasat University.
+
+
+\section{Setting up with this thesis template}
+
+Before writing our theses we must set up our computers by installing the following programs in the computers:
+\begin{enumerate}[\quad1)]
+	\item Program for \LaTeX typesetting, such as, MiKTeX, TeXLive, or MacTeX appropriate to the operating system install in our computers.
+	\item Tex editor with Unicode support, such as, TeXstudio (recommended) or Texmaker.
+\end{enumerate}
+This template is separate into many section in order to handle with adjusting a document depending on the requirements of Thammasat University. The main file is “1\_MAIN.tex” including other sub-files: “2\_ThesisInformation.tex”, “3\_PreliminarySection.tex”, etc.. First, authors have to provide some information in the file “2\_ThesisInformation.tex”. The info. will appear in many places of writing, such as a cover, abstract page or biography, etc.. To compile this template, we can compile it with XeLaTaX through “1\_MAIN.tex” or other .tex files opened along with “1\_MAIN.tex” in TeXstudio (recommended). 4\_TeXtSection.tex is separated into sub-input files contained in the Chapters folder. We can type your main material there.
+Sometimes we need to add Thai phrases in our English documents. For the template using the fonts FreeSerif and TH Sarabun New, we can type Thai phrases directly. However, the FreeSerif-font template dose not produce Thai phrases with TH Sarabun New. If we Need to use TH Saraban New for Thai phrases, use the command \verb|\thai| with the phrases, for example \verb|{\thai <our Thai phrases>}|. This command is also compatible with the template using Times New Roman.
+
+
+
+
+\section{About components created automatically}
+
+Some components of this template will be created automatically after we provide information with appropriate \LaTeX commands. They are separated into 2 groups as follows:
+\begin{enumerate}[\quad1)]
+	\item This group includes cover, approval page, abstracts, and acknowledgements. They will be created after filling in some information In the file “ThesisInformation.tex”.
+	\item The components in this group are created after applying general appropriate \LaTeX commands. The group includes table of contents, list of tables and list of figures. The last two component are optional. Authors can leave out them by removing (or make comment by \%) the commands “\verb|\listoftables|” and “\verb|\listoffigures|” placed in the main file “1\_MAIN.tex”.
+\end{enumerate}
+
+
+\section{About components created \underline{semi}-automatically}
+
+
+
+\subsection{List of abbreviations}
+\subsectionindent We need to set up a command to obtain this list. First, open the Configure TeXstudio panel. On TeXstudio for Windows, click “Options” and then “Configure TeXstudio”. After that choose “Build” on the left-hand side Configure TeXstudio panel. Now click the button named “+Add” on the right side and copy the following command to the right block:\vskip2mm
+
+\noindent~\hfill\verb|makeindex -s nomencl.ist -t 1_MAIN.nlg -o 1_MAIN.nls 1_MAIN.nlo|\hfill~\vskip2mm
+\noindent On the left block put a command name, “Abbreviations” for example. Finally, click OK on the right below of the panel. You can find the new command by clicking on the “Tools” menu, then “User”.
+
+\subsectionindent List of abbreviations is created by \verb|\listofabbreviations| placed in “1\_MAIN.tex”. The command is constructed under the “\verb|nomencl|” package, so to obtain this component we have to use the command \\[2mm]
+\verb|\nomenclature[<order>]{<symbol or abbreviation>}{<term or meaning>}|.\\[2mm]
+Authors can put this command in this file after the first appearance of symbols, or we can put the command in the file “2\_ThesisInformation.tex”, see at the end of the file for example. In the example, we use the numbers 1 and 2 in the order block to separate symbols and English alphabet. Then type the first two or three letters of symbols or abbreviations to order them in the list of abbreviations.
+
+\subsectionindent After adding a new abbreviation, the authors nave to compile their file by XeLaTeX. Then apply the new command constructed in the first paragraph and compile by XeLaTeX again. If everything has been done correctly, the List of abbreviations will appear in the pages before starting Chapter 1.
+
+\subsection{References and citation}
+
+\subsectionindent This template is prepared to create references separately by using the commands \verb|\bibmanual{<style>}| or \verb|\bibauto{<style>}| placed in “1\_MAIN.tex”. These two commands are based on the packages “\verb|natbib|” and “\verb|biblatex|”, respectively. Since the packages are not compatible with one another, ether \verb|\bibmanual{<style>}| or \verb|\bibauto{<style>}| will be disable.
+
+\subsubsection{Manual references creation}
+\subsubsectionindent If we prefer to create a reference list manually, apply the command \verb|\bibmanual{<style>}| and choose a suitable style (turabian, apa or vancouver) for the command \verb|\bibmanual{<style>}|. After that open the file “5\_ReferenceSection.tex” and type our references in the environment “\verb*|thebibliography|” placed in the “BIBMANUAL” part. For the “apa” and “Turabian” styles, you need to add lines of reference types yourself by the command \verb|\item\textbf{<reference type>}|, see in “5\_ReferenceSection.tex” for example. The table below shows some commands used for citation and their outputs. More citing technique can be found in natbib documentation.
+
+\begin{longtable}{|l|l|}\hline
+	\multicolumn{1}{|c|}{\textbf{Commands}} & \multicolumn{1}{c|}{\textbf{Output}}\\\hline
+	\verb|\citet{jon90}| 						& Jones et al. (1990)\\\hline
+	\verb|\citet[chap. 2]{jon90}|			& Jones et al. (1990, chap. 2)\\\hline
+	\verb|\citep{jon90}|						& (Jones et al., 1990)\\\hline
+	\verb|\citep[chap. 2]{jon90}|			& (Jones et al., 1990, chap. 2)\\\hline
+	\verb|\citep[see][]{jon90}|			 	& (see Jones et al., 1990)\\\hline
+	\verb|\citep[see][chap. 2]{jon90}|	  & (see Jones et al., 1990, chap. 2)\\\hline
+	\verb|\citet*{jon90}| 						& Jones, Baker, and Williams (1990)\\\hline
+	\verb|\citep*{jon90}|						& (Jones, Baker, and Williams 1990)\\\hline
+	\verb|\citet{jon90,jam91}|				 & Jones et al. (1990); James and Tony (1991)\\\hline
+	\verb|\citep{jon90,jam91}|				& (Jones et al., 1990; James and Tony, 1991)\\\hline
+	\verb|\citep{jon90,jon91}| 				& (Jones et al., 1990, 1991)\\\hline
+	\verb|\citep{jon90a,jon90b}|			& (Jones et al., 1990a,b)\\\hline
+	\verb|\citealt{jon90}|						& Jones et al. 1990\\\hline
+	\verb|\citealt*{jon90}| 					& Jones, Baker, and Williams 1990\\\hline
+	\verb|\citealp{jon90}| 						& Jones et al., 1990\\\hline
+	\verb|\citealp*{jon90}| 					& Jones, Baker, and Williams, 1990\\\hline
+	\verb|\citealp{jon90,jam91}| 			& Jones et al., 1990; James and Tony., 1991\\\hline
+	\verb|\citealp[pg. 32]{jon90}| 			& Jones et al., 1990, pg. 32\\\hline
+	\verb|\citeauthor{jon90}|  				& Jones et al.\\\hline
+	\verb|\citeauthor*{jon90}| 				& Jones, Baker, and Williams\\\hline
+	\verb|\citeyear{jon90}| 					& 1990\\\hline
+	\verb|\citeyearpar{jon90}| 				& (1990)\\\hline
+\end{longtable}
+
+
+
+
+
+\subsubsection{automatic references creation}
+\subsubsectionindent This way of creation use the command \verb|\bibauto{<style>}|. The style of references depend on the package “biblatex” which creates a reference list automatically. Thus an output may have a few things different from that we want. Similar to the previous method, we need to choose the style of references. After that open the database file “6\_References.bib” and add information of references by using bibliography entry corresponding to the type of the references. You can find bibliography entries in the “Bibliography” menu of TeXstudio. “keywords = {<ref key>},” is recommended to all inserted bibliography entries to separate references into many groups when the “apa” or “Turabian” styles are applied. For example, articles in journals and proceedings may be grouped together by using “keywords = {article},”. Other groups of references will be used other keywords. Then we print the articles’ group of references by using the command \vskip2mm
+
+\hspace*{-3cm}\verb|\printbibliography[heading=subbibliography, keyword=article, title={Articles}]|.\vskip2mm
+
+\noindent “keyword=article” in the command corresponds to that used in the bibliography entries whose “keywords” is article. Remember! for the command \verb|\printbibliography|, we use “keyword” (singular) but bibliography entry use ``keywords'' (plural). The option  “title={Articles}” indicates that the title line of this group will be appeared as “Articles”. Authors may create group of references other than the examples in the file “5\_ReferenceSection.tex”. Only commands of groups that we need are active.
+
+\subsubsectionindent Sometimes we have references in different languages for some types. We can separate them by keyword. For example, we have references of the article type in Thai and English. We may use articleth and articleen to be keywords for the references in Thai and English, respectively. Then print the article-type references by two lines of the command \verb|\printbibliography| with keywords articleth and articleen.
+
+\hspace*{-3cm}\verb|\printbibliography[heading=subbibliography, keyword=articleth, title={Articles}]|
+
+\hspace*{-3cm}\verb|\printbibliography[heading=none, keyword=articleen, title={Articles}]|.\vskip2mm 
+
+\subsubsectionindent The system will print the line of “Article” type and follow by the list of references in Thai and English, respectively. Let us consider the option “heading” in the examples above, only the first line of each reference type uses “subbibliography” and other lines of the command use “none”.
+
+\subsubsectionindent Now we can cite our references by using the command\linebreak \verb|\cite{<bib ID>}|, \verb|\citeauthor{<bib ID>}| and \verb|\citeyear{<bib ID>}| in our text, the last two commands are not active for the turabian style. Then compile our .tex file by XeLaTeX, biber (click on the “Tools” menu and point on “Commands”) and XeLaTeX, respectively. We will have the References page if everything has been done normally. Note for this case that only cited references will appear in a references list (similar to bibtex). Remeber!! Biber compiling is needed every time we add new references or citations.
+
+
+% Examples for \bibauto ======================================
+
+%\cite{ExArticle} 
+%
+%\cite[pp. 1143--1148]{ExArticle}
+%
+%\citeauthor{ExArticle} 
+%
+%\citeyear[pp. 1143--1148]{ExArticle}
+%
+%\citetitle{ExArticle} 
+%
+%\cite{ExBook, ExBooklet, ExInbook, ExIncollection} 
+%\cite{ExInproceedings} 
+%\cite{ExMastersThesis}
+%\cite{ExManual}
+%\cite{ExMisc} 
+%\cite{ExPhdThesis}
+%\cite{ExProceeding}
+%\cite{ExTechReport}
+%\cite{ExUnpublished}
+%\cite{ExBookก}
+%\cite{ExBookข}
+
+
+\bigskip
+\noindent{\textbf{Remark:}} 1. If we need to add references in footnotes for the Tarabian Style, the command \verb|\footnote{<Reference>}| is recommended.
+
+\hspace{-2.5mm}2. The environment “blockquote” is recommended for block quotation.\\
+\verb|\begin{blockquote} ….text…. \end{blockquote}|
+
+% Examples for block quotation ======================================
+
+
+%\begin{blockquote}
+%	Co-presence does not ensure intimate interaction among all group members. Consider large-scale social gatherings in which hundreds	or thousands of people gather in a location to perform a ritual or celebrate an event. 
+%	
+%	In these instances, participants are able to see the visible
+%	manifestation of the group, the physical gathering, yet their ability
+%	to make direct, intimate connections with those around them is
+%	limited by the sheer magnitudes of the assembly. (Purcell, 1997,
+%	pp. 111-112).
+%\end{blockquote}
+
+
+
+
+
+\section{Chapters sections and indentation}
+
+\begin{itemize}
+	\item The following commands are required for add our these components:
+	\begin{enumerate}[1)]
+		\item	\verb|\part{<heading>}|: add a part
+		\item	\verb|\chapter{<heading>}|: add a chapter
+		\item	\verb|\section{<heading>}|: add a section
+		\item	\verb|\subsection{<heading>}|: add a subsection
+		\item	\verb|\subsubsection{<heading>}|: add the second level subsection
+		\item	\verb|\paragraph{<heading>}|: add the third level subsection
+		\item	\verb|\appendix[nosub]|: placed before an appendix part to create an appendix which has not subappendices 
+		\item	\verb|\appendix|: placed before an appendix part to create an appendix separated to many subappendices (use \verb|\chapter{<heading>}| to add a subappendix)
+	\end{enumerate}
+	\item Indentation commands
+	\begin{enumerate}[1)]
+		\item \verb|\indent|: indentation for paragraphs in chapters and sections
+		\item \verb|\subsectionindent|: indentation for paragraphs in subsections
+		\item \verb|\subsubsectionindent|: indentation for paragraphs in the second level subsections
+		\item \verb|\paragraphindent|: indentation for paragraphs in the third level subsections
+	\end{enumerate}
+\end{itemize}
+
+
+
+
+
+
+
+\section{Inserting tables, figures and mathematical expressions}
+
+\subsection{Tables}
+
+\subsectionindent First construct our tables in \LaTeX. Then place them in the environment “table” and type their descriptions in the command \verb|\caption{<description>}| in order that the tables’ names and descriptions appear in the list of tables, see the following settings for example.
+
+\begin{table}[!h]
+	\caption[Table’s name and description in different lines]{\newline Table’s name and description in different lines}
+	\centering
+	\begin{tabular}{|l|c|r|p{1cm}|}
+		\hline
+		aaa & bbb & ccc & ddd\\
+		\hline
+		x & y & z & w\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\caption{Table’s name and caption in the same line}
+	\centering
+	\begin{tabular}{|l|c|r|p{1cm}|}
+		\hline
+		aaa & bbb & ccc & ddd\\
+		\hline
+		x & y & z & w\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\noindent\textbf{Remark:} We can use the environment “\verb|longtable|” to create our tables and the command \verb|\caption{<description>}| can be applied without the environment “\verb|table|”. We can learn how to use the environment “\verb|longtable|” from websites.
+
+\subsection{Figures}
+
+\subsectionindent We have to prepare our figures and paste the files in the folder containing .tex files. Then insert them by the command
+
+\hspace*{-1cm}\verb|\includegraphics[<option>]{<graphic’s path/graphic’s name>}|.\vskip2mm
+
+\subsectionindent placed in the environment figure. Similar to the case of tables, type the figures’ descriptions in the command \verb|\caption{<description>}|, so the figures’ names and descriptions will occur in the list of figures.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{CRU_LOGO/CRU_Chandra.jpg}
+	\caption[Figure’s name and description in different lines]{\newline Figure’s name and description in different lines}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{CRU_LOGO/CRU_Chandra.jpg}
+	\caption{Figure’s name and description in the same line}
+\end{figure}
+
+\noindent From the examples, the figure file is TULOGO.pdf placed in the folder named TULOGO.
+
+
+\subsection{Mathematical expressions}
+
+\noindent \textbf{Inline math mode:} use \verb|$ math $| or \verb|\( math \)| to indicate that everything in the delimiters is a mathematical expression inserted as part of a paragraph.
+
+\noindent \textbf{Example:} $ \sqrt[4]{16} $ is the same number as \( \sqrt{4} \) 
+
+\noindent \textbf{Display math mode:} use \verb|$$ math $$| or \verb|\[ math \]| to indicate that everything in the delimiters is a mathematical expression inserted as not part of a paragraph.
+
+\noindent \textbf{Example:} If we need to know the root of the equation
+$$ ax^2 + bx + c = 0, $$
+use the formula
+\[ x = \frac{-b\pm \sqrt{b^2- 4ac}}{2a}. \]
+
+\noindent \textbf{Display math mode with equation numbers:} use environment, such as, equation, align, flalign, etc.
+
+\noindent \textbf{Example:}
+\begin{equation}
+	e=mc^2
+\end{equation}
+\begin{align}
+	z 	&= \frac{-(d-a) \pm \sqrt{(d-a)^2 - 4c(-b)}}{2c}\\
+	&= \frac{(a-d) \pm \sqrt{d^2 + 2ad + a^2 - 4(ad - bc)}}{2c}\\
+	&= \frac{(a-d) \pm \sqrt{(d + a)^2 - 4}}{2c}.
+\end{align}
+\begin{align}
+	z 	&= \frac{-(d-a) \pm \sqrt{(d-a)^2 - 4c(-b)}}{2c}\\
+	&= \frac{(a-d) \pm \sqrt{d^2 + 2ad + a^2 - 4(ad - bc)}}{2c}\notag\\
+	&= \frac{(a-d) \pm \sqrt{(d + a)^2 - 4}}{2c}
+\end{align}
+\begin{align*}
+	z 	&= \frac{-(d-a) \pm \sqrt{(d-a)^2 - 4c(-b)}}{2c}\\
+	&= \frac{(a-d) \pm \sqrt{d^2 + 2ad + a^2 - 4(ad - bc)}}{2c}\\
+	&= \frac{(a-d) \pm \sqrt{(d + a)^2 - 4}}{2c}\stepcounter{equation}\tag{\theequation}
+\end{align*}
+
+\begin{flalign}
+	&&		e	&= mc^2&\\
+	\text{and}&&	z 	&= \frac{-(d-a) \pm \sqrt{(d-a)^2 - 4c(-b)}}{2c}&\\
+	&&			&= \frac{(a-d) \pm \sqrt{d^2 + 2ad + a^2 - 4(ad - bc)}}{2c}&\\
+	&&			&= \frac{(a-d) \pm \sqrt{(d + a)^2 - 4}}{2c}.&
+\end{flalign}
+
+\section{Miscellaneous} 
+\begin{itemize}
+	\item If we need to type lowercase alphabets in chapter’s or part’s titles, the command \verb|\lowercase{<text>}| or \verb|\MakeLowercase{<text>}| are recommended
+	
+	\item If we need different outputs of chapter’s or part’s titles, etc., in table of contents and our text, Use the command with option, such as, \verb|\chapter[title in contents]{title in text}| and \verb|\part[title in contents]{title in text}|.
+	
+	\item Students can determine theorem environments in preamble section if needed. 
+\end{itemize}

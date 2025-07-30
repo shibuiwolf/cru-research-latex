@@ -1,0 +1,72 @@
+
+\makeatletter
+\ifx\@bibmanual\bibvancouver
+	\usepackage[numbers,compress]{natbib}
+	\newlength{\biblabellength}
+	\let\old@bibitem\bibitem
+	\renewcommand\bibitem[2][\theNAT@ctr]{\old@bibitem[#1]{#2}\hspace{0.45in}}
+	\renewcommand\@biblabel[1]{\settowidth{\biblabellength}{#1.}#1.\hspace{-\the\biblabellength}\hspace{-0.2cm}}
+	\setlength{\bibsep}{0pt}
+\fi
+\ifx\@bibmanual\bibapa
+	\usepackage{natbib}
+	\setlength{\bibsep}{0pt}
+	\setlength{\bibhang}{0.5in}
+\fi
+\ifx\@bibmanual\bibturabian
+	\usepackage{natbib}
+	\setlength{\bibsep}{0pt}
+	\setlength{\bibhang}{0.5in}
+\fi
+
+
+\ifx\@bibauto\bibvancouver 
+	\usepackage[citestyle=numeric-comp, bibstyle=vancouver, backend=biber, natbib=true]{biblatex}
+	\addbibresource{6_References.bib}
+	\defbibenvironment{bibliography}
+	{\list{\printtext[]{%
+				\printfield{prefixnumber}%
+				\parbox[t]{0pt}{\hspace*{3.1mm}\printfield{labelnumber}.}
+		}}
+		{\setlength{\bibhang}{0pt}%
+			\setlength{\leftmargin}{\bibhang}%
+			\setlength{\itemindent}{\bibhang}%
+			\setlength{\itemsep}{\bibitemsep}%
+			\setlength{\parsep}{\bibparsep}}}
+	{\endlist}
+	{\item\hspace{0.5in}}
+\fi
+\ifx\@bibauto\bibapa
+	\usepackage[style=apa, backend=biber]{biblatex}
+	\addbibresource{6_References.bib}
+	\defbibenvironment{bibliography}
+	{\list{}
+		{\setlength{\bibhang}{0.5in}%
+			\setlength{\leftmargin}{\bibhang}%
+			\setlength{\itemindent}{-\bibhang}%
+			\setlength{\itemsep}{\bibitemsep}%
+			\setlength{\parsep}{\bibparsep}%
+			\setlength{\partopsep}{0pt}%
+			\setlength{\topsep}{0pt}}}
+	{\endlist}
+	{\item}
+\fi
+\ifx\@bibauto\bibturabian
+	\usepackage[style=chicago-notes, backend=biber]{biblatex}
+	\addbibresource{6_References.bib}
+	\defbibenvironment{bibliography}
+{\list{}
+	{\setlength{\bibhang}{0.5in}%
+		\setlength{\leftmargin}{\bibhang}%
+		\setlength{\itemindent}{-\bibhang}%
+		\setlength{\itemsep}{\bibitemsep}%
+		\setlength{\parsep}{\bibparsep}%
+		\setlength{\partopsep}{0pt}%
+		\setlength{\topsep}{0pt}}}
+{\endlist}
+{\item}
+\fi
+\makeatother
+
+\AtBeginDocument{\renewcommand{\bibname}{รายการอ้างอิง}}
+
