@@ -9,15 +9,17 @@
 		\bfseries\@thesistitle
 	\vfill
 	\fontsize{14}{16.1}\selectfont 
+	
 	% โดย\\ - Unused โดย
 	\vspace{1.427465\baselineskip}
 	\@authorThai
 	\vfill
-	 \@typeofwritingThai นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตร\\
-	\@degreeThai\\
-	\ifdefined\@majorThai \@majorThai \ifdefined\@departmentThai\space\fi\fi \ifdefined\@departmentThai \@departmentThai\\ \fi
-	\@facultyThai\space มหาวิทยาลัยราชภัฏจันทรเกษม\\
-	ปีการศึกษา \the\year
+
+	% ตั้งค่า Font ให้เปลี่ยนไซส์อัตโนมัติ
+	\fontsize{13}{16.1}\selectfont
+		\@typeofwritingThai ครั้งนี้เป็นส่วนหนึ่งของวิชา\@researchsubjectThai\\
+	\ifdefined\@degreeThai \@degreeThai\space\fi \ifdefined\@majorThai \@majorThai\space\fi \@facultyThai 
+	\\มหาวิทยาลัยราชภัฏจันทรเกษม\space ปีการศึกษา \the\year
 	\par}
 
 

@@ -110,6 +110,11 @@ labelsep=space
 \def\IndStudy{Independent Study}
 \def\Thesis{Thesis}
 \def\Dissertation{Dissertation}
+
+% research subject name -------------------------------------------------------
+\newcommand{\researchsubjectThai}[1]{\def\@researchsubjectThai{#1}}
+\newcommand{\researchsubject}[1]{\def\@researchsubject{#1}}
+
 % thesis advisory and examination committees ----------------------------------
 \newcommand{\advisorThai}[1]{\def\@advisorThai{#1}}
 \newcommand{\advisor}[1]{\def\@advisor{#1}}
