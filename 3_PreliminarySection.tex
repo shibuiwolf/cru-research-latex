@@ -11,13 +11,13 @@
 	\fontsize{14}{16.1}\selectfont 
 	
 	% โดย\\ - Unused โดย
-	\vspace{1.427465\baselineskip}
+	% \vspace{1.427465\baselineskip}
 	\@authorThai
 	\vfill
 
 	% ตั้งค่า Font ให้เปลี่ยนไซส์อัตโนมัติ
-	\fontsize{13}{16.1}\selectfont
-		\@typeofwritingThai ครั้งนี้เป็นส่วนหนึ่งของวิชา\@researchsubjectThai\\
+	\fontsize{13.1}{16.1}\selectfont
+	\@typeofwritingThai ครั้งนี้เป็นส่วนหนึ่งของวิชา\@researchsubjectThai\\
 	\ifdefined\@degreeThai \@degreeThai\space\fi \ifdefined\@majorThai \@majorThai\space\fi \@facultyThai 
 	\\มหาวิทยาลัยราชภัฏจันทรเกษม\space ปีการศึกษา \the\year
 	\par}
@@ -54,19 +54,28 @@
 	\fontsize{16}{18.4}\selectfont
 	\bfseries\expandafter\uppercase\expandafter{\@thesistitle}\\\vspace{1.427465\baselineskip}\ \\
 	\fontsize{14}{16.1}\selectfont\bfseries
+	
 	% BY\\ - Unused "By"
 	\vspace{1.427465\baselineskip}
 	\expandafter\uppercase\expandafter{\@author}
 	\vfill
+	
+	% Bottom Pages
+	\fontsize{13.1}{16.1}\selectfont
 	\ifx\@typeofwriting\IndStudy AN	\else A	\fi 
 	\expandafter\uppercase\expandafter{\@typeofwriting}\ SUBMITTED IN PARTIAL FULFILLMENT OF\\
-	THE REQUIREMENTS FOR THE DEGREE OF\\
-	\expandafter\uppercase\expandafter{\@degree}\\
-	\ifdefined\@major \expandafter\uppercase\expandafter{\@major}\\ \fi
-	\ifdefined\@department \expandafter\uppercase\expandafter{\@department}\\ \fi
-	\expandafter\uppercase\expandafter{\@faculty}\\
-	CHANDRAKASEM RAJABHAT UNIVERSITY\\
-	ACADEMIC YEAR \advance\year-543 \the\year
+	THE REQUIREMENTS FOR \ifdefined\@researchsubject \expandafter\uppercase\expandafter{\@researchsubject} \fi \\
+	
+	% Move New Line
+	\ifdefined\@degree \expandafter\uppercase\expandafter{\@degree} \fi
+	\ifdefined\@major \expandafter\uppercase\expandafter{\@major} \fi
+	\ifdefined\@faculty \expandafter\uppercase\expandafter{\@faculty} \fi \\
+	
+
+	% Department unused
+	% \ifdefined\@department \expandafter\uppercase\expandafter{\@department} \fi
+	
+	CHANDRAKASEM RAJABHAT UNIVERSITY\space\space ACADEMIC YEAR \advance\year-543 \the\year
 	\par}
 
 \cleardoublepage
