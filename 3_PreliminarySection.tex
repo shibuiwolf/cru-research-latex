@@ -48,18 +48,22 @@
 %
 %
 %
-% TITLE PAGE IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\centering
+
+% TITLE PAGE IN ENGLISH - NEW VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	{\centering
 	\fontsize{16}{18.4}\selectfont
-	\bfseries\expandafter\uppercase\expandafter{\@thesistitle}\\\vspace{1.427465\baselineskip}\ \\
-	\fontsize{14}{16.1}\selectfont\bfseries
-	
-	% BY\\ - Unused "By"
-	\vspace{1.427465\baselineskip}
-	\expandafter\uppercase\expandafter{\@author}
+		\includegraphics[width=1in]{CRU_LOGO/CRU_Chandra}\\\vspace{\baselineskip}
+		\bfseries\@thesistitle\\
 	\vfill
+	\fontsize{14}{16.1}\selectfont 
 	
+	% โดย\\ - Unused โดย
+	% \vspace{1.427465\baselineskip}
+	\@author
+	\vfill
+
+	% ตั้งค่า Font ให้เปลี่ยนไซส์อัตโนมัติ
 	% Bottom Pages
 	\fontsize{13.1}{16.1}\selectfont
 	\ifx\@typeofwriting\IndStudy AN	\else A	\fi 
@@ -78,8 +82,42 @@
 	CHANDRAKASEM RAJABHAT UNIVERSITY\space\space ACADEMIC YEAR \advance\year-543 \the\year
 	\par}
 
+
 \cleardoublepage
 \newpage
+
+% % TITLE PAGE IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% {\centering
+% 	\fontsize{16}{18.4}\selectfont
+% 	\bfseries\expandafter\uppercase\expandafter{\@thesistitle}\\\vspace{1.427465\baselineskip}\ \\
+% 	\fontsize{14}{16.1}\selectfont\bfseries
+	
+% 	% BY\\ - Unused "By"
+% 	\vspace{1.427465\baselineskip}
+% 	\expandafter\uppercase\expandafter{\@author}
+% 	\vfill
+	
+% 	% Bottom Pages
+% 	\fontsize{13.1}{16.1}\selectfont
+% 	\ifx\@typeofwriting\IndStudy AN	\else A	\fi 
+% 	\expandafter\uppercase\expandafter{\@typeofwriting}\ SUBMITTED IN PARTIAL FULFILLMENT OF\\
+% 	THE REQUIREMENTS FOR \ifdefined\@researchsubject \expandafter\uppercase\expandafter{\@researchsubject} \fi \\
+	
+% 	% Move New Line
+% 	\ifdefined\@degree \expandafter\uppercase\expandafter{\@degree} \fi
+% 	\ifdefined\@major \expandafter\uppercase\expandafter{\@major} \fi
+% 	\ifdefined\@faculty \expandafter\uppercase\expandafter{\@faculty} \fi \\
+	
+
+% 	% Department unused
+% 	% \ifdefined\@department \expandafter\uppercase\expandafter{\@department} \fi
+	
+% 	CHANDRAKASEM RAJABHAT UNIVERSITY\space\space ACADEMIC YEAR \advance\year-543 \the\year
+% 	\par}
+
+% \cleardoublepage
+% \newpage
 
 
 % Approval Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
