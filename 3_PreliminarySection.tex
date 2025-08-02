@@ -167,6 +167,24 @@
 \newpage
 
 
+% Approval Page - CRU Version %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \frontmatter 
+\noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
+	หัวข้อ\@typeofwritingThai					& \parbox[t]{\linewidth}{\strut\@thesistitleforabstractThai\strut}\\
+	ชื่อผู้เขียน									& \@authorThai\\
+	ชื่อปริญญา									& \@degreeThai\\
+	\ifdefined\@majorThai สาขาวิชา\else ภาควิชา \fi
+	/คณะ/มหาวิทยาลัย					& \ifdefined\@majorThai \@majorThai \else \@departmentThai \fi\\
+	& \@facultyThai\\
+	& มหาวิทยาลัยราชภัฏจันทรเกษม\\
+	อาจารย์ที่ปรึกษา\@typeofwritingThai		& \@advisorThai\\
+	% \ifdefined\@coadvisorThai อาจารย์ที่ปรึกษา\@typeofwritingThai ร่วม & \@coadvisorThai\\ \fi
+	ปีการศึกษา						& \the\year
+\end{tabularx}
+
+
+
 
 % ABSTRACT IN THAI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
