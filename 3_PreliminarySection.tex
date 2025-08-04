@@ -125,46 +125,46 @@
 
 % Approval Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	{\centering  มหาวิทยาลัยราชภัฏจันทรเกษม\\
-	\expandafter\uppercase\expandafter{\@facultyThai}\\[7mm]
-	\expandafter\uppercase\expandafter{\@typeofwritingThai}\\[7mm]
-	โดย\\[7mm]
-	\expandafter\uppercase\expandafter{\@authorThai}\\[7mm]
-	เรื่อง\\[7mm]
-	\expandafter\uppercase\expandafter{\@thesistitleThai}\\[7mm]
-	ได้รับการตรวจสอบและอนุมัติ ให้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตร\\
-	\@degreeThai\\[7mm]
-	เมื่อ วันที่ \@approvaldate\\[7mm]}
-	\vfill
-	\noindent{ประธานกรรมการสอบ\@typeofwritingThai} \hfill 
-	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@chairman)}}\\
-	\vfill
-	\noindent{กรรมการและอาจารย์ที่ปรึกษา\@typeofwritingThai\ifdefined\@coadvisorThai หลัก\fi} \hfill 
-	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@advisorThai)}}\\
-	\ifdefined\@coadvisorThai\vfill
-	\noindent{กรรมการและอาจารย์ที่ปรึกษา\@typeofwritingThai รอง} \hfill 
-	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@coadvisorThai)}}\\\fi
-	\ifdefined\@memberone\vfill
-	\noindent{กรรมการสอบ\@typeofwritingThai} \hfill 
-	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@memberone)}}\\\fi
-	\ifdefined\@membertwo\vfill
-	\noindent{กรรมการสอบ\@typeofwritingThai} \hfill 
-	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@membertwo)}}\\\fi
-	\vfill
-	\noindent{คณบดี} \hfill 
-	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@dean)}}
-	\ifx\@coadvisorThai\undefined
-	\\[5mm]
-	\fi
-	\ifx\@memberone\undefined
-	\\[5mm]
-	\fi
-	\ifx\@membertwo\undefined
-	\\[5mm]
-	\fi
+% 	{\centering  มหาวิทยาลัยราชภัฏจันทรเกษม\\
+% 	\expandafter\uppercase\expandafter{\@facultyThai}\\[7mm]
+% 	\expandafter\uppercase\expandafter{\@typeofwritingThai}\\[7mm]
+% 	โดย\\[7mm]
+% 	\expandafter\uppercase\expandafter{\@authorThai}\\[7mm]
+% 	เรื่อง\\[7mm]
+% 	\expandafter\uppercase\expandafter{\@thesistitleThai}\\[7mm]
+% 	ได้รับการตรวจสอบและอนุมัติ ให้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตร\\
+% 	\@degreeThai\\[7mm]
+% 	เมื่อ วันที่ \@approvaldate\\[7mm]}
+% 	\vfill
+% 	\noindent{ประธานกรรมการสอบ\@typeofwritingThai} \hfill 
+% 	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@chairman)}}\\
+% 	\vfill
+% 	\noindent{กรรมการและอาจารย์ที่ปรึกษา\@typeofwritingThai\ifdefined\@coadvisorThai หลัก\fi} \hfill 
+% 	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@advisorThai)}}\\
+% 	\ifdefined\@coadvisorThai\vfill
+% 	\noindent{กรรมการและอาจารย์ที่ปรึกษา\@typeofwritingThai รอง} \hfill 
+% 	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@coadvisorThai)}}\\\fi
+% 	\ifdefined\@memberone\vfill
+% 	\noindent{กรรมการสอบ\@typeofwritingThai} \hfill 
+% 	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@memberone)}}\\\fi
+% 	\ifdefined\@membertwo\vfill
+% 	\noindent{กรรมการสอบ\@typeofwritingThai} \hfill 
+% 	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@membertwo)}}\\\fi
+% 	\vfill
+% 	\noindent{คณบดี} \hfill 
+% 	\parbox[t]{0.51\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@dean)}}
+% 	\ifx\@coadvisorThai\undefined
+% 	\\[5mm]
+% 	\fi
+% 	\ifx\@memberone\undefined
+% 	\\[5mm]
+% 	\fi
+% 	\ifx\@membertwo\undefined
+% 	\\[5mm]
+% 	\fi
 	
-\cleardoublepage	
-\newpage
+% \cleardoublepage	
+% \newpage
 
 
 % Approval Page - CRU Version %%%%%%%%%%%
@@ -183,25 +183,53 @@
 	ปีการศึกษา						& \the\year
 \end{tabularx}
 
+% Insert Line Break
+\par\noindent\rule{\textwidth}{0.4pt}
+\\
+
+% \indent คือ การเว้นแบบ Tab
+\indent สาขา\ifdefined\@majorThai \@majorThai\fi \space มหาวิทยาลัยราชภัฏจันทรเกษม 
+\space อนุมัติให้นับงานวิจัยนี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาบัณฑิต \\[10mm]
+
+% \noindent{ประธานกรรมการสอบ\@typeofwritingThai} \hfill
+
+\parbox[t]{0.5\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@majorhead)}}
+\noindent{ประธานหลักสูตร} \\[10mm]
+
+\noindent{คณะกรรมการสอบวิจัย} \\[10mm]
+
+% \noindent{ประธานกรรมการสอบ\@typeofwritingThai} \hfill 
+\parbox[t]{0.5\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@chairman)}}
+\noindent{ประธานกรรมการสอบ} \\[10mm]
+
+\parbox[t]{0.5\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@memberone)}}
+\noindent{กรรมการ} \\[10mm]
+
+\parbox[t]{0.5\linewidth}{\centering\hrulefill\\\vspace{-2mm}\makebox[\linewidth][c]{(\@advisorThai)}}
+\noindent{อาจารย์ที่ปรึกษา} \\[10mm]
+
+\cleardoublepage
+\newpage
+
 
 
 
 % ABSTRACT IN THAI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{page}{1}
-\frontmatter
-\noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
-	หัวข้อ\@typeofwritingThai					& \parbox[t]{\linewidth}{\strut\@thesistitleforabstractThai\strut}\\
-	ชื่อผู้เขียน									& \@authorThai\\
-	ชื่อปริญญา									& \@degreeThai\\
-	\ifdefined\@majorThai สาขาวิชา\else ภาควิชา \fi
-	/คณะ/มหาวิทยาลัย					& \ifdefined\@majorThai \@majorThai \else \@departmentThai \fi\\
-	& \@facultyThai\\
-	& มหาวิทยาลัยราชภัฏจันทรเกษม\\
-	อาจารย์ที่ปรึกษา\@typeofwritingThai		& \@advisorThai\\
-	\ifdefined\@coadvisorThai อาจารย์ที่ปรึกษา\@typeofwritingThai ร่วม & \@coadvisorThai\\ \fi
-	ปีการศึกษา						& \the\year
-\end{tabularx}
+% \frontmatter
+% \noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
+% 	หัวข้อ\@typeofwritingThai					& \parbox[t]{\linewidth}{\strut\@thesistitleforabstractThai\strut}\\
+% 	ชื่อผู้เขียน									& \@authorThai\\
+% 	ชื่อปริญญา									& \@degreeThai\\
+% 	\ifdefined\@majorThai สาขาวิชา\else ภาควิชา \fi
+% 	/คณะ/มหาวิทยาลัย					& \ifdefined\@majorThai \@majorThai \else \@departmentThai \fi\\
+% 	& \@facultyThai\\
+% 	& มหาวิทยาลัยราชภัฏจันทรเกษม\\
+% 	อาจารย์ที่ปรึกษา\@typeofwritingThai		& \@advisorThai\\
+% 	\ifdefined\@coadvisorThai อาจารย์ที่ปรึกษา\@typeofwritingThai ร่วม & \@coadvisorThai\\ \fi
+% 	ปีการศึกษา						& \the\year
+% \end{tabularx}
 \includecollection{abstractThai}
 
 
@@ -215,19 +243,19 @@
 % ABSTRACT IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{page}{1}
-\frontmatter
-\noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
-\@typeofwriting\ Title							& \parbox[t]{\linewidth}{\strut\expandafter\uppercase\expandafter{\@thesistitleforabstract}\strut}\\
-Author									& \@author\\
-Degree									& \@degree\\
-\ifdefined\@major Major Field\else Department \fi
-/Faculty/University					& \ifdefined\@major \@major \else \@department \fi\\
-											& \@faculty\\
-											& Chandrakasem Rajabhat University\\
-\@typeofwriting\ Advisor		& \@advisor\\
-\ifdefined\@coadvisor\@typeofwriting\ Co-advisor & \@coadvisor\\ \fi
-Academic Year						& \advance\year-543 \the\year
-\end{tabularx}
+% \frontmatter
+% \noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
+% \@typeofwriting\ Title							& \parbox[t]{\linewidth}{\strut\expandafter\uppercase\expandafter{\@thesistitleforabstract}\strut}\\
+% Author									& \@author\\
+% Degree									& \@degree\\
+% \ifdefined\@major Major Field\else Department \fi
+% /Faculty/University					& \ifdefined\@major \@major \else \@department \fi\\
+% 											& \@faculty\\
+% 											& Chandrakasem Rajabhat University\\
+% \@typeofwriting\ Advisor		& \@advisor\\
+% \ifdefined\@coadvisor\@typeofwriting\ Co-advisor & \@coadvisor\\ \fi
+% Academic Year						& \advance\year-543 \the\year
+% \end{tabularx}
 \includecollection{abstract}
 
 

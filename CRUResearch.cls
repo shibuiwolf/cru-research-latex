@@ -120,6 +120,11 @@ labelsep=space
 \newcommand{\advisor}[1]{\def\@advisor{#1}}
 \newcommand{\coadvisorThai}[1]{\def\@coadvisorThai{#1}}
 \newcommand{\coadvisor}[1]{\def\@coadvisor{#1}}
+
+% Add Head of Major -----------------------------------------------------------
+\newcommand{\majorhead}[1]{\def\@majorhead{#1}}
+\newcommand{\majorheaddegree}[1]{\def\@majorheaddegree{#1}}
+
 \newcommand{\chairman}[1]{\def\@chairman{#1}}
 \newcommand{\memberone}[1]{\def\@memberone{#1}}
 \newcommand{\membertwo}[1]{\def\@membertwo{#1}}
