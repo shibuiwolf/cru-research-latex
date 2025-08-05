@@ -1,0 +1,38 @@
+\documentclass[12pt,oneside,a4paper]{CRUResearch}
+
+% Choose between \bibmanual and \bibauto then choose one of the following reference style
+% turabian, apa or vancouver
+% filling in a bracket of the chosen command.
+
+\bibmanual{apa}
+%\bibauto{vancouver}
+
+\usepackage{CRUbibsetting}
+
+
+
+
+
+% USER COMMANDS & PACKAGES
+
+
+
+
+
+
+
+
+\begin{document}
+	% Some optional commands, mark with "OPT", can be omitted by making them as comments 
+	% (type "%" before them).
+	\include{2_ThesisInformation}
+	\include{3_PreliminarySection}
+	\tableofcontents*
+	\listoftables %OPT
+	\listoffigures %OPT
+	\listofabbreviations %OPT
+	\include{4_TextSection}
+	\include{5_ReferenceSection}
+	\include{7_Appendices}
+%	\include{8_Biography}
+\end{document}

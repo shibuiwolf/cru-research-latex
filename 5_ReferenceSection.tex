@@ -1,0 +1,99 @@
+% BIBAUTO
+\makeatletter
+\ifdefined\@bibauto
+\ifx\@bibauto\bibvancouver
+% biblatex vancouver
+\printbibliography[title=\bibname]
+\else
+% biblatex apa, biblatex chicago-notes (Turabian)
+\printbibheading[title=\bibname]
+\nobibintoc
+\printbibliography[heading=subbibliography, keyword=bookth, title={หนังสือและบทความในหนังสือ}] % thai references
+% use heading=none to remove heading of the list of references whose keyword is book and combine them with the list of references above.
+\printbibliography[heading=none, keyword=book, title={หนังสือและบทความในหนังสือ}] % english references
+\printbibliography[heading=subbibliography, keyword=proceeding, title={รายงานการประชุมทางวิชาการ}]
+\printbibliography[heading=subbibliography, keyword=article, title={บทความวารสาร}]
+\printbibliography[heading=subbibliography, keyword=thesis, title={วิทยานิพนธ์}]
+\printbibliography[heading=subbibliography, keyword=report, title={รายงาน}]
+\printbibliography[heading=subbibliography, keyword=manual, title={คู่มือ}]
+\printbibliography[heading=subbibliography, keyword=booklet, title={จุลสาร}]
+\printbibliography[heading=subbibliography, keyword=electronicmedia, title={สื่ออิเล็กทรอนิกส์}]
+\printbibliography[heading=subbibliography, keyword=unpublished, title={เอกสารที่ไม่ตีพิมพ์}]
+\printbibliography[heading=subbibliography, keyword=miscellaneous, title={เบ็ดเตล็ด}]
+\fi\fi\makeatother
+
+
+
+
+
+% BIBMANUAL
+\makeatletter\ifdefined\@bibmanual
+\begin{thebibliography}{}
+	
+	\item\textbf{หนังสือและบทความในหนังสือ} % remove when the vancouver style is active.
+	\item % remove when the vancouver style is active.
+	
+	
+	% set up references for turabian and apa styles
+	\bibitem[First Author et al.(year)First Author, Second Author, and Third Author]{ID1}
+	First Author, Second Author, and Third Author...
+	
+	
+	\bibitem[First Author and Second Author(year)]{ID2}
+	First Author, Second Author, and Third Author...
+	
+	
+	\item % remove when the vancouver style is active.
+	\item\textbf{บทความวารสาร} % remove when the vancouver style is active.
+	\item % remove when the vancouver style is active.
+	
+	
+	% example
+	\bibitem[Jones et al.(1990)Jones, Baker, and Williams]{jon90}
+	Jones, Baker, and Williams...
+	
+	\bibitem[James and Tony(1991)]{jam91}
+	James and Tony...
+	
+	\bibitem[Jones et al.(1991)Jones, Robin, and Smith]{jon91}
+	Jones, Robin, and Smith...
+	
+	
+	\item % remove when the vancouver style is active.
+	\item\textbf{วิทยานิพนธ์} % remove when the vancouver style is active.
+	\item % remove when the vancouver style is active.
+	
+	
+	\bibitem[Jones et al.(1990a)Jones, Baker, and Williams]{jon90a}
+	Jones, Baker, and Williams...
+	
+	\bibitem[Jones et al.(1990b)Jones, Robin, and Smith]{jon90b}
+	Jones, Robin, and Smith...
+	
+	\bibitem[Jones et al.(1990a)Jones, Baker, and Williams]{jon90aa}
+	Jones, Baker, and Williams...
+	
+	\bibitem[Jones et al.(1990b)Jones, Robin, and Smith]{jon90ba}
+	Jones, Robin, and Smith...
+	
+	\bibitem[Jones et al.(1990a)Jones, Baker, and Williams]{jon90ab}
+	Jones, Baker, and Williams...
+	
+	\bibitem[Jones et al.(1990b)Jones, Robin, and Smith]{jon90bb}
+	Jones, Robin, and Smith...
+	
+	
+	
+\end{thebibliography}
+\fi\makeatother
+
+
+
+
+
+
+
+
+
+
+
