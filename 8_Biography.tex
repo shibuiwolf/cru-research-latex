@@ -1,18 +1,29 @@
 \makeatletter
-\oldchapter*{ประวัติผู้เขียน}
-\addcontentsline{toc}{chapter}{ประวัติผู้เขียน}
+\oldchapter*{ประวัติผู้วิจัย}
+\addcontentsline{toc}{chapter}{ประวัติผู้วิจัย}
 \begin{longtable}{@{}p{0.34\linewidth}@{}p{0.66\linewidth}@{}}
 	ชื่อ									& \@nametitle\@authorThai\\
-	วันเดือนปีเกิด							& \@dateofbirth\\
-	วุฒิการศึกษา			 & \parbox[t]{\linewidth}{\strut\@eduattainment\strut}\\
-	\ifdefined\@workposition ตำแหน่ง	& \@workposition\\\fi
-	\ifdefined\@scholarship ทุนการศึกษา		& \parbox[t]{\linewidth}{\strut\@scholarship\strut}\\\fi
+	\ifdefined\@cruStudentId รหัสประจำตัว   & \@cruStudentId\\ \fi
+	วัน เดือน ปีเกิด							& \@dateofbirth\\
+	ประวัติการศึกษา			 & \parbox[t]{\linewidth}{\strut\@eduattainment \strut}\\
+	\ifdefined\@yearOfEnroll ปีที่เข้าศึกษา & \@yearOfEnroll\\ \fi
+	\ifdefined\@email อีเมล & \@email\\ \fi
+	
+	% Unused - ตำแหน่ง
+	% \ifdefined\@workposition ตำแหน่ง	& \@workposition\\ \fi
+
+	% Unused - ทุนการศึกษา
+	% \ifdefined\@scholarship ทุนการศึกษา		& \parbox[t]{\linewidth}{\strut\@scholarship\strut}\\ \fi
 \end{longtable}
-\noindent ผลงานทางวิชาการ\vspace{\baselineskip}\newline
-\includecollection{publications}\vspace{0.5\baselineskip}
-\ifdefined\@workposition
-\begin{longtable}{@{}p{0.34\linewidth}@{}p{0.66\linewidth}@{}}
-	ประสบการณ์ทำงาน					& \parbox[t]{\linewidth}{\strut\@workexperiences\strut}\\
-\end{longtable}
-\fi
+
+% Unused - ผลงานวิชาการ
+% \noindent ผลงานทางวิชาการ\vspace{\baselineskip}\newline
+
+% Unused - ประสบการณ์การทำงาน
+% \includecollection{publications}\vspace{0.5\baselineskip}
+% \ifdefined\@workposition
+% \begin{longtable}{@{}p{0.34\linewidth}@{}p{0.66\linewidth}@{}}
+% 	ประสบการณ์ทำงาน					& \parbox[t]{\linewidth}{\strut\@workexperiences\strut}\\
+% \end{longtable}
+% \fi
 \makeatother

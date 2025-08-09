@@ -90,10 +90,17 @@ labelsep=space
 \newcommand{\nametitle}[1]{\def\@nametitle{#1}}
 \newcommand{\authorThai}[1]{\def\@authorThai{#1}}
 \newcommand{\dateofbirth}[1]{\def\@dateofbirth{#1}}
+\newcommand{\email}[1]{\def\@email{#1}}
+
+% author's workplace info -------------------------------------------------------------------
 \newcommand{\workposition}[1]{\def\@workposition{#1}}
 \newcommand{\eduattainment}[1]{\def\@eduattainment{#1}}
 \newcommand{\scholarship}[1]{\def\@scholarship{#1}}
 \newcommand{\workexperiences}[1]{\def\@workexperiences{#1}}
+
+% author's university info -------------------------------------------------------------------
+\newcommand{\yearOfEnroll}[1]{\def\@yearOfEnroll{#1}}
+\newcommand{\cruStudentId}[1]{\def\@cruStudentId{#1}}
 \newcommand{\degreeThai}[1]{\def\@degreeThai{#1}}
 \newcommand{\degree}[1]{\def\@degree{#1}}
 \newcommand{\majorThai}[1]{\def\@majorThai{#1}}
@@ -102,6 +109,7 @@ labelsep=space
 \newcommand{\department}[1]{\def\@department{#1}}
 \newcommand{\facultyThai}[1]{\def\@facultyThai{#1}}
 \newcommand{\faculty}[1]{\def\@faculty{#1}}
+
 % thesis's info -------------------------------------------------------------------------------
 \newcommand{\academicyear}[1]{\year=#1}
 \newcommand{\approvaldate}[1]{\def\@approvaldate{#1}}

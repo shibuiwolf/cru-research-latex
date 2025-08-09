@@ -50,43 +50,44 @@
 %
 %
 
+% Unused - Title page in English
 % TITLE PAGE IN ENGLISH - NEW VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	{\centering
-	\fontsize{16}{18.4}\selectfont
-		\includegraphics[width=1in]{CRU_LOGO/CRU_Chandra}\\\vspace{\baselineskip}
-		\bfseries\@thesistitle\\
-	\vfill
-	\fontsize{14}{16.1}\selectfont 
+% 	{\centering
+% 	\fontsize{16}{18.4}\selectfont
+% 		\includegraphics[width=1in]{CRU_LOGO/CRU_Chandra}\\\vspace{\baselineskip}
+% 		\bfseries\@thesistitle\\
+% 	\vfill
+% 	\fontsize{14}{16.1}\selectfont 
 	
-	% โดย\\ - Unused โดย
-	% \vspace{1.427465\baselineskip}
-	\@author
-	\vfill
+% 	% โดย\\ - Unused โดย
+% 	% \vspace{1.427465\baselineskip}
+% 	\@author
+% 	\vfill
 
-	% ตั้งค่า Font ให้เปลี่ยนไซส์อัตโนมัติ
-	% Bottom Pages
-	\fontsize{13.1}{16.1}\selectfont
-	\ifx\@typeofwriting\IndStudy AN	\else A	\fi 
-	\expandafter\uppercase\expandafter{\@typeofwriting}\ SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS\\
-	FOR \ifdefined\@researchsubject \expandafter\uppercase\expandafter{\@researchsubject} \fi \\
+% 	% ตั้งค่า Font ให้เปลี่ยนไซส์อัตโนมัติ
+% 	% Bottom Pages
+% 	\fontsize{13.1}{16.1}\selectfont
+% 	\ifx\@typeofwriting\IndStudy AN	\else A	\fi 
+% 	\expandafter\uppercase\expandafter{\@typeofwriting}\ SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS\\
+% 	FOR \ifdefined\@researchsubject \expandafter\uppercase\expandafter{\@researchsubject} \fi \\
 	
-	% Move New Line
-	\ifdefined\@degree \expandafter\uppercase\expandafter{\@degree} \fi
-	\ifdefined\@major \expandafter\uppercase\expandafter{\@major} \fi \\
-	\ifdefined\@faculty \expandafter\uppercase\expandafter{\@faculty} \fi \\
+% 	% Move New Line
+% 	\ifdefined\@degree \expandafter\uppercase\expandafter{\@degree} \fi
+% 	\ifdefined\@major \expandafter\uppercase\expandafter{\@major} \fi \\
+% 	\ifdefined\@faculty \expandafter\uppercase\expandafter{\@faculty} \fi \\
 	
 
-	% Department unused
-	% \ifdefined\@department \expandafter\uppercase\expandafter{\@department} \fi
+% 	% Department unused
+% 	% \ifdefined\@department \expandafter\uppercase\expandafter{\@department} \fi
 	
-	CHANDRAKASEM RAJABHAT UNIVERSITY\\
-	ACADEMIC YEAR \advance\year-543 \the\year
-	\par}
+% 	CHANDRAKASEM RAJABHAT UNIVERSITY\\
+% 	ACADEMIC YEAR \advance\year-543 \the\year
+% 	\par}
 
 
-\cleardoublepage
-\newpage
+% \cleardoublepage
+% \newpage
 
 % % TITLE PAGE IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,25 +171,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \frontmatter 
 \noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
-	หัวข้อ\@typeofwritingThai					& \parbox[t]{\linewidth}{\strut\@thesistitleforabstractThai\strut}\\
-	ชื่อผู้เขียน									& \@authorThai\\
-	ชื่อปริญญา									& \@degreeThai\\
-	\ifdefined\@majorThai สาขาวิชา\else ภาควิชา \fi
-	/คณะ/มหาวิทยาลัย					& \ifdefined\@majorThai \@majorThai \else \@departmentThai \fi\\
-	& \@facultyThai\\
-	& มหาวิทยาลัยราชภัฏจันทรเกษม\\
-	อาจารย์ที่ปรึกษา\@typeofwritingThai		& \@advisorThai\\
+	หัวข้อ\@typeofwritingThai & \parbox[t]{\linewidth}{\strut\@thesistitleforabstractThai\\ \@thesistitleforabstract\strut}\\
+	ผู้วิจัย & \@authorThai\\
+	รหัสประจำตัว & \@cruStudentId\\
+	สาขาวิชา & \@majorThai\\
+	อาจารย์ที่ปรึกษา & \@advisorThai\\	
+
+	% ถ้าหากมีที่ปรึกษาร่วม ให้เอา "%" ออก
 	% \ifdefined\@coadvisorThai อาจารย์ที่ปรึกษา\@typeofwritingThai ร่วม & \@coadvisorThai\\ \fi
-	ปีการศึกษา						& \the\year
-\end{tabularx}
+\end{tabularx}\newline
 
 % Insert Line Break
 \par\noindent\rule{\textwidth}{0.4pt}
-\\
 
 % \indent คือ การเว้นแบบ Tab
-\indent สาขา\ifdefined\@majorThai \@majorThai\fi \space มหาวิทยาลัยราชภัฏจันทรเกษม 
-\space อนุมัติให้นับงานวิจัยนี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาบัณฑิต \\[10mm]
+\indent สาขา\ifdefined\@majorThai \@majorThai\fi \space \ifdefined\@facultyThai \@facultyThai\space \fi มหาวิทยาลัยราชภัฏจันทรเกษม 
+อนุมัติให้นับงานวิจัยนี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาบัณฑิต \\[10mm]
 
 % \noindent{ประธานกรรมการสอบ\@typeofwritingThai} \hfill
 
@@ -239,28 +237,29 @@
 
 
 
+% Unused - Abstract in English
 % ABSTRACT IN ENGLISH %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setcounter{page}{1}
-% \frontmatter
-% \noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
-% \@typeofwriting\ Title							& \parbox[t]{\linewidth}{\strut\expandafter\uppercase\expandafter{\@thesistitleforabstract}\strut}\\
-% Author									& \@author\\
-% Degree									& \@degree\\
-% \ifdefined\@major Major Field\else Department \fi
-% /Faculty/University					& \ifdefined\@major \@major \else \@department \fi\\
-% 											& \@faculty\\
-% 											& Chandrakasem Rajabhat University\\
-% \@typeofwriting\ Advisor		& \@advisor\\
-% \ifdefined\@coadvisor\@typeofwriting\ Co-advisor & \@coadvisor\\ \fi
-% Academic Year						& \advance\year-543 \the\year
-% \end{tabularx}
-\includecollection{abstract}
+% \setcounter{page}{1}
+% % \frontmatter
+% % \noindent\begin{tabularx}{\linewidth}{@{}l@{\qquad}X@{}}
+% % \@typeofwriting\ Title							& \parbox[t]{\linewidth}{\strut\expandafter\uppercase\expandafter{\@thesistitleforabstract}\strut}\\
+% % Author									& \@author\\
+% % Degree									& \@degree\\
+% % \ifdefined\@major Major Field\else Department \fi
+% % /Faculty/University					& \ifdefined\@major \@major \else \@department \fi\\
+% % 											& \@faculty\\
+% % 											& Chandrakasem Rajabhat University\\
+% % \@typeofwriting\ Advisor		& \@advisor\\
+% % \ifdefined\@coadvisor\@typeofwriting\ Co-advisor & \@coadvisor\\ \fi
+% % Academic Year						& \advance\year-543 \the\year
+% % \end{tabularx}
+% \includecollection{abstract}
 
 
 
-\cleardoublepage
-\newpage
+% \cleardoublepage
+% \newpage
 
 
 
